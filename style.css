@@ -7,7 +7,7 @@ body{
 
 .main {
     grid-area: content;
-    background: url(Images/Group\ 1@2x.png);
+    background: url(Images/Group\ 1.png);
 }
 
 .sidebar {
@@ -16,6 +16,7 @@ body{
     #018786,
      #4A148C);
      justify-content: center;
+     align-items: center;
 }
 
 .footer{
@@ -31,7 +32,7 @@ body{
     grid-template-areas:
     "sidebar" "content" "footer";
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 200px;
+    grid-template-rows: 125px 1fr 200px;
 }
 
 .sidebar,
@@ -42,9 +43,10 @@ body{
 
 nav ul {
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    align-items: center;
 }
 
 nav li{
@@ -54,7 +56,7 @@ nav li{
 
 nav li a{
     color: #fff;
-    font-weight: 700;
+    font-weight: 500;
     opacity: 0.6;
     text-decoration: none;
     transition: 0.5s;
@@ -62,4 +64,76 @@ nav li a{
 
 nav li a:hover{
     opacity: 1;
+}
+
+.about{
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about img {
+    width: 200px;
+}
+
+.about h1 {
+    font-size: 2em;
+    font-weight: 300;
+    color: #1C1717;
+}
+
+.about p {
+    font-weight: 100;
+    line-height: 2em;
+    color: #8B8B8B;
+}
+
+.action-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    background: #4A148C;
+    padding: 0.25em 1em;
+    border-radius: 30px;
+    margin: 1em 0;
+    transition-duration: 0.8;
+    transition-timing-function: ease-in-out;
+    box-shadow: 5px 10px 30px rgba(0,0,0,0.3);
+}
+
+.action-btn:hover{
+    transform: scale(1.1);
+    transition-duration: 0.8s;
+    background: rgb(50, 237, 250);
+    color:#4A148C;
+}
+
+.action-btn:active{
+    transform: scale(1.5);
+    transition-duration: 0.1s;
+}
+
+footer ul{
+    list-style: none;
+    direction: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+}
+footer ul i:hover{
+    font-weight: 700;
+    color: #4A148C;
+    transform: scale(1.1);
+    
+}
+
+footer ul li p {
+    font-family: 'Nunito', sans-serif;
+}
+
+@media (min-width: 1040px){
+    
 }
