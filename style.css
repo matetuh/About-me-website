@@ -6,7 +6,7 @@ body{
 }
 
 .main {
-    grid-area: content;
+    grid-area: main;
     background: url(Images/Group\ 1.png);
 }
 
@@ -30,7 +30,9 @@ body{
     height: 100vh;
     display: grid;
     grid-template-areas:
-    "sidebar" "content" "footer";
+    "sidebar"
+    "main"
+    "footer";
     grid-template-columns: 1fr;
     grid-template-rows: 125px 1fr 200px;
 }
@@ -131,9 +133,83 @@ footer ul i:hover{
 }
 
 footer ul li p {
+    text-decoration: none;
     font-family: 'Nunito', sans-serif;
+}
+footer h4 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 15px;
 }
 
 @media (min-width: 1040px){
+    .container {
+        display: grid;
+        grid-template-areas:
+        "sidebar main"
+        "sidebar footer";
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 1fr 150fr;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .sidebar {
+        background: linear-gradient( #018786,
+        #4A148C);
+        padding-top: 3em;
+    }
+
+    .about {
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    .about img {
+        width: 250px;
+
+    }
+
+    .about h1 {
+        font-size: 3em;
+    }
+
+    .about p {
+        width: 50%;
+    }
+
+    footer ul{
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0.5em 0;
+    }
+}
+
+@media (max-width: 650px){
     
+    nav ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    nav li{
+        list-style: none;
+        padding: 1em 0;
+    }
+    
+    nav li a{
+        font-size: 15px;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0.6;
+        text-decoration: none;
+        transition: 0.5s;
+    }
 }
