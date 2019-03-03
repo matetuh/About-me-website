@@ -112,7 +112,6 @@ nav li a:hover{
 .project-image:hover {
     transform: scale(1.15);
     opacity: 0.6;
-    background-color: #4A148C;
 }
 
 footer ul{
