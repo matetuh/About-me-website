@@ -154,7 +154,7 @@ footer h4 {
         "sidebar main"
         "sidebar footer";
         grid-template-columns: 300px 1fr;
-        grid-template-rows: 1fr 150fr;
+        grid-template-rows: 1fr 170px;
     }
 
     nav ul {
@@ -174,10 +174,25 @@ footer h4 {
         justify-content: center;
     }
 
+    @keyframes bounceIn {
+        0% {
+          transform: scale(0.1);
+          opacity: 0;
+        }
+        60% {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
     .about img {
         width: 300px;
+        animation: bounceIn;
+        animation-duration: 2s;
     }
-
     footer ul{
         max-width: auto;
         margin: 0 auto;
