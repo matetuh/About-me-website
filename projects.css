@@ -3,14 +3,16 @@
 body{
     font-family: 'Nunito', sans-serif;
     background: #F5F5F5;
+    margin: 0;
+    padding: 0;
 }
 
-.main {
+main {
     grid-area: main;
     background: url(Images/Group\ 1.png);
 }
 
-.sidebar {
+nav {
     grid-area: sidebar;
     background: linear-gradient(to right,
     #018786,
@@ -19,9 +21,10 @@ body{
      align-items: center;
 }
 
-.footer{
+footer{
     grid-area: footer;
     background: white;
+    padding: 1em;
 }
 
 .container{
@@ -37,16 +40,7 @@ body{
     grid-template-rows: 125px 1fr 200px;
 }
 
-.sidebar,
-.footer{
-    padding: 1em;
-}
-.main{
-    padding: 0 0.5em;
-    min-height: 1000px;
-}
-
-nav ul {
+.sidebar ul {
     margin: 0;
     padding: 0;
     display: flex;
@@ -54,12 +48,12 @@ nav ul {
     align-items: center;
 }
 
-nav li{
+.sidebar li{
     list-style: none;
     padding: 1em 0;
 }
 
-nav li a{
+.sidebar li a{
     color: #fff;
     font-weight: 500;
     opacity: 0.6;
@@ -67,20 +61,14 @@ nav li a{
     transition: 0.5s;
 }
 
-nav li a:hover{
+.sidebar li a:hover{
     opacity: 1;
 }
 
 /*od tad zaczynaja sie projekty */
 
-.main{
-	max-width: 100rem;
-	margin: 0 auto;
-	padding: 0 2rem 2rem;
-}
 
 .heading {
-	font-family: "Nunito", Arial, sans-serif;
 	font-size: 4rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -88,33 +76,44 @@ nav li a:hover{
 	padding: 5px 0;
 	color: #1a1a1a;
 }
-
-
+main{
+    display: flex;
+    flex-direction: column;
+}
 .project {
-	display: flex;
-	flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
 }
 
-.project-item {
-	flex: 2 2 12em;
-	margin: 1rem;
-	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
-	overflow: hidden;
+.project-item p{
+    color: gray;
+    font-size: 15px;
 }
 
-.project-image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	transition: transform 400ms ease-out;
+.project-item img {
+    height: 200px;
+    width: 200px;
+    transition: .3s ease-in-out;
 }
 
-.project-image:hover {
-    transform: scale(1.15);
-    opacity: 0.6;
+.project-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-footer ul{
+.project-item img:hover {
+    border-radius: 50%;
+}
+
+main h3{
+    font-weight: 100;
+    text-align: center;
+}
+
+.footer ul{
     list-style: none;
     direction: none;
     text-align: center;
@@ -123,19 +122,19 @@ footer ul{
     transition: 1s;
     transition-timing-function: ease-in-out;
 }
-footer ul i:hover{
+.footer ul i:hover{
     text-decoration: none;
     font-weight: 700;
     color: #4A148C;
     transform: scale(1.1);
 }
 
-footer ul li p,a {
+.footer ul li p,a {
     color:black;
     text-decoration: none;
     font-family: 'Nunito', sans-serif;
 }
-footer h4 {
+.footer h4 {
     text-align: center;
     font-weight: 300;
     font-size: 15px;
@@ -151,29 +150,46 @@ footer h4 {
         grid-template-rows: 1fr 170px;
     }
 
-    nav ul {
+    main {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sidebar ul {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
-    .sidebar {
+    nav {
         background: linear-gradient( #018786,
         #4A148C);
         padding-top: 3em;
     }
     
 
-    footer ul{
+    .footer ul{
         max-width: auto;
         margin: 0 auto;
         padding: 0.2em 0;
     }
 }
 
-@media only screen and (max-width: 1300px){
+@media only screen and (max-width: 600px){
 
-    nav ul {
+    .project {
+        flex-direction: column;
+        justify-content: 
+    }
+
+    main{
+        margin: 0 auto;;
+        padding: 0;
+    }
+    main .project img{
+        flex-direction: column;
+    }
+    .sidebar ul {
         margin: 0;
         padding: 0;
         display: flex;
@@ -181,13 +197,13 @@ footer h4 {
         align-items: center;
     }
     
-    nav li{
+    .sidebar li{
         list-style: none;
         padding: 1em 0;
     }
     
-    nav li a{
-        font-size: 15px;
+    .sidebar li a{
+        font-size: 20px;
         color: #fff;
         font-weight: 500;
         opacity: 0.6;
