@@ -7,7 +7,10 @@ body{
 /* KONTENTER */
 main {
     grid-area: main;
-    background: url(Images/Group\ 1.png);
+    background: url(Images/map_blur.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 nav {
@@ -63,74 +66,97 @@ nav li a:hover{
     opacity: 1;
 }
 /* TREŚĆ */
-main .left-pic{
-    grid-area: lefpic;
-}
-
-main .right-info{
-    grid-area: riginf;
-}
-
 main{
-    font-size: 20px;
     width: 100%;
-    height: 90%;
-    display: grid;
-    grid-template-areas:
-    "lefpic"
-    "riginf";
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr;
+    height: 100vh;
+    overflow: scroll;
 }
 
-.left-pic img{
-    object-fit: cover;
-    height: 200px;
-    width: 100%;
+main .contact{
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .info form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    margin: 20px 0;
+    padding: 20px 0;
 }
 
-main .right-info .item1{
-    grid-area: one;
-}
-main .right-info .item2{
-    grid-area: two;
-}
-main .right-info .item3{
-    grid-area: three;
-}
-main .right-info .item4{
-    grid-area: four;
-}
-
-main .right-info p{
-    font-size: 20px;
-    margin: 10px 20px;
-}
-main .right-info h1{
-    font-size: 40px;
-    margin: 30px 20px;
-}
-
-main{
+.header h1{
     text-align: center;
+    color: white;
+    font-size: 50px;
 }
 
-main .right-info .fab{
-    font-size: 35px;
-    color: #018786;
+.header p{
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 18px;
 }
 
-main .right-info .description{
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-areas: 
-    "one" 
-    "two"
-    "three"
-    "four";
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+.info form input{
+    color: white;
+    margin: 20px auto;
+    width: 50%;
+    background: rgba(0,0,0,0);
+    border: none;
+    border-bottom: 1px solid white;
+}
+::-webkit-input-placeholder{
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+button{
+    color: white;
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin: 0 25% 0 25%;
+    padding: 20px 10px;
+    font-size: 16px;
+    background-image: linear-gradient(240deg,#018786, #4A148C);
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.mail,
+.tel{
+    font-size: 18px;
+    color: white;
+    margin: 0 5%;;
+    border-radius: 15px;
+    width: 20%;
+    height: 100px;
+    background-image: linear-gradient(240deg,#018786, #4A148C);
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    overflow: visible;
+}
+
+.abut-me{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+button:active{
+    transform: scale(1.15);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    background-image: linear-gradient(-240deg,#018786, #4A148C);
 }
 
 /* STOPKA */
@@ -182,34 +208,7 @@ footer h4 {
         #4A148C);
         padding-top: 3em;
     }
-    main{
-        font-size: 15px;
-        width: 100%;
-        height: 100vh;
-        display: grid;
-        grid-template-areas:
-        "lefpic riginf";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-    }
     
-    main .right-info .description{
-        display: grid;
-        width: 100%;
-        height: 100vh;
-        grid-template-areas: 
-        "one two"
-        "three four";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
-
-    .left-pic img{
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-    }
-
     footer ul{
         max-width: auto;
         margin: 0 auto;
@@ -241,4 +240,22 @@ footer h4 {
         transition: 0.5s;
     }
     
+    .mail,
+    .tel{
+    font-size: 15px;
+    color: white;
+    margin: 0 5%;;
+    border-radius: 15px;
+    width: 25%;
+    height: 100px;
+    background-image: linear-gradient(240deg,#018786, #4A148C);
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    overflow: visible;
+}
 }
