@@ -87,14 +87,18 @@ main .head h1{
     font-size: 60px;
 }
 
-main h3,p{
+main h3 {
     text-align: center;
     width: 50%;
     margin: 10px auto;
-}
-main h3{
     font-weight: 500;
     font-size: 30px;
+}
+
+main p{
+    text-align: center;
+    width: 50%;
+    margin: 10px auto;
 }
 
 main{
