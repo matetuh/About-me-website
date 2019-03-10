@@ -40,7 +40,7 @@ footer{
     grid-template-rows: 125px 1fr 200px;
 }
 
-.sidebar ul {
+nav ul {
     margin: 0;
     padding: 0;
     display: flex;
@@ -48,12 +48,12 @@ footer{
     align-items: center;
 }
 
-.sidebar li{
+nav li{
     list-style: none;
     padding: 1em 0;
 }
 
-.sidebar li a{
+nav li a{
     color: #fff;
     font-weight: 500;
     opacity: 0.6;
@@ -61,14 +61,38 @@ footer{
     transition: 0.5s;
 }
 
-.sidebar li a:hover{
+nav li a:hover{
     opacity: 1;
 }
 
 /*od tad zaczynaja sie projekty */
 
 
-.heading {
+main .head img{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+main .head h1{
+    z-index: 10;
+    color: black;
+    position: absolute;
+    margin: 50px 0 50px 50px;
+    font-weight: 100;
+    font-size: 60px;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+main h1 {
 	font-size: 4rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -76,35 +100,33 @@ footer{
 	padding: 5px 0;
 	color: #1a1a1a;
 }
-main{
-    display: flex;
-    flex-direction: column;
-}
-.project {
+
+main .project {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
 }
 
-.project-item p{
+main .project .project-item p{
     color: gray;
     font-size: 15px;
 }
 
-.project-item img {
-    height: 200px;
-    width: 200px;
+main .project .project-item img {
+    height: 250px;
+    width: 250px;
     transition: .3s ease-in-out;
+    object-fit: cover;
 }
 
-.project-item{
+main .project .project-item{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.project-item img:hover {
+main .project .project-item img:hover {
     border-radius: 50%;
 }
 
@@ -113,7 +135,7 @@ main h3{
     text-align: center;
 }
 
-.footer ul{
+footer ul{
     list-style: none;
     direction: none;
     text-align: center;
@@ -122,19 +144,19 @@ main h3{
     transition: 1s;
     transition-timing-function: ease-in-out;
 }
-.footer ul i:hover{
+footer ul i:hover{
     text-decoration: none;
     font-weight: 700;
     color: #4A148C;
     transform: scale(1.1);
 }
 
-.footer ul li p,a {
+footer ul li p,a {
     color:black;
     text-decoration: none;
     font-family: 'Nunito', sans-serif;
 }
-.footer h4 {
+footer h4 {
     text-align: center;
     font-weight: 300;
     font-size: 15px;
@@ -150,12 +172,7 @@ main h3{
         grid-template-rows: 1fr 170px;
     }
 
-    main {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .sidebar ul {
+    nav ul {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -168,7 +185,7 @@ main h3{
     }
     
 
-    .footer ul{
+    footer ul{
         max-width: auto;
         margin: 0 auto;
         padding: 0.2em 0;
@@ -176,34 +193,31 @@ main h3{
 }
 
 @media only screen and (max-width: 600px){
-
-    .project {
-        flex-direction: column;
-        justify-content: 
-    }
-
-    main{
-        margin: 0 auto;;
-        padding: 0;
-    }
-    main .project img{
-        flex-direction: column;
-    }
-    .sidebar ul {
+    nav ul {
         margin: 0;
         padding: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
+    main ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    main h1{
+        font-size: 20px;
+        text-align: center;
+    }
     
-    .sidebar li{
+    nav li{
         list-style: none;
         padding: 1em 0;
     }
     
-    .sidebar li a{
-        font-size: 20px;
+    nav li a{
+        font-size: 15px;
         color: #fff;
         font-weight: 500;
         opacity: 0.6;

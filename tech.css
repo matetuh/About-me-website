@@ -4,8 +4,7 @@ body{
     margin: 0;
     padding: 0;
 }
-
-/* CONTAINER */
+/* KONTENTER */
 main {
     grid-area: main;
     background: url(Images/Group\ 1.png);
@@ -15,15 +14,15 @@ nav {
     grid-area: sidebar;
     background: linear-gradient(to right,
     #018786,
-    #4A148C);
-    justify-content: center;
-    align-items: center;
+     #4A148C);
+     justify-content: center;
+     align-items: center;
 }
 
 footer{
     grid-area: footer;
     background: white;
-    padding: 1em;
+    padding-top: 1em;
 }
 
 .container{
@@ -38,12 +37,12 @@ footer{
     grid-template-columns: 1fr;
     grid-template-rows: 125px 1fr 200px;
 }
-/*NAWIGACJA*/
+/* NAWIGACJA */
 nav ul {
-    margin: 0;
+    margin: 0 10px;
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -63,55 +62,74 @@ nav li a{
 nav li a:hover{
     opacity: 1;
 }
-/*TREŚĆ*/
-main h2,i{
-    color: #018786;
+/* TREŚĆ */
+main .left-pic{
+    grid-area: lefpic;
+}
+
+main .right-info{
+    grid-area: riginf;
 }
 
 main{
-    max-width: 960px;
-    margin: 20px auto;
+    font-size: 20px;
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-areas:
+    "lefpic"
+    "riginf";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.left-pic img{
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+
+main .right-info .item1{
+    grid-area: one;
+}
+main .right-info .item2{
+    grid-area: two;
+}
+main .right-info .item3{
+    grid-area: three;
+}
+main .right-info .item4{
+    grid-area: four;
+}
+
+main .right-info p{
+    font-size: 15px;
+    margin: 10px 20px;
+}
+
+main{
     text-align: center;
 }
 
-main h1 {
-    font-size: 2em;
-    font-weight: 300;
-    color: #1C1717;
+main .right-info .fab{
+    font-size: 35px;
+    color: #018786;
 }
 
-main p {
-    font-weight: 100;
-    line-height: 2em;
-    color: #8B8B8B;
+main .right-info .description{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: 
+    "one" 
+    "two"
+    "three"
+    "four";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-main .action-btn{
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    background: #4A148C;
-    padding: 0.25em 1em;
-    border-radius: 30px;
-    margin: 1em 0;
-    transition-duration: 0.8;
-    transition-timing-function: ease-in-out;
-    box-shadow: 5px 10px 30px rgba(0,0,0,0.3);
-}
-
-main .action-btn:hover{
-    transform: scale(1.1);
-    transition-duration: 0.8s;
-    background: rgb(50, 237, 250);
-    color:#4A148C;
-}
-
-main .action-btn:active{
-    transform: scale(1.5);
-    transition-duration: 0.1s;
-}
-/*STOPKA*/
+/* STOPKA */
 footer ul{
     list-style: none;
     direction: none;
@@ -121,7 +139,6 @@ footer ul{
     transition: 1s;
     transition-timing-function: ease-in-out;
 }
-
 footer ul i:hover{
     text-decoration: none;
     font-weight: 700;
@@ -139,7 +156,7 @@ footer h4 {
     font-weight: 300;
     font-size: 15px;
 }
-/*RESPONSYWNOŚĆ*/
+/* RESPONSYWNOŚĆ */
 @media (min-width: 1040px){
     .container {
         display: grid;
@@ -147,7 +164,7 @@ footer h4 {
         "sidebar main"
         "sidebar footer";
         grid-template-columns: 300px 1fr;
-        grid-template-rows: 1fr 170px;
+        grid-template-rows: 1fr 150fr;
     }
 
     nav ul {
@@ -161,40 +178,43 @@ footer h4 {
         #4A148C);
         padding-top: 3em;
     }
-
-    main h1 {
-        margin: 0 50px 25px 50px;
+    main{
+        font-size: 15px;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-areas:
+        "lefpic riginf";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
     }
     
-    main p{
-        margin: 25px 100px 25px 100px;
+    main .right-info .description{
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-areas: 
+        "one two"
+        "three four";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
-    @keyframes bounceIn {
-        0% {
-          transform: scale(0.1);
-          opacity: 0;
-        }
-        60% {
-          transform: scale(1.2);
-          opacity: 1;
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
-
-    main img {
-        animation: bounceIn;
-        animation-duration: 2s;
+    .left-pic img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
     }
+
     footer ul{
         max-width: auto;
         margin: 0 auto;
+        padding: 0.2em 0;
     }
 }
 
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 600px){
+
     nav ul {
         margin: 0;
         padding: 0;
@@ -202,7 +222,7 @@ footer h4 {
         justify-content: space-between;
         align-items: center;
     }
-    
+
     nav li{
         list-style: none;
         padding: 1em 0;
@@ -216,4 +236,5 @@ footer h4 {
         text-decoration: none;
         transition: 0.5s;
     }
+    
 }
