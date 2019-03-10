@@ -122,7 +122,7 @@ footer ul{
     transition-timing-function: ease-in-out;
 }
 
-footer ul i:hover{
+footer ul p:hover{
     text-decoration: none;
     font-weight: 700;
     color: #4A148C;

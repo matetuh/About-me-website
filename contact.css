@@ -66,10 +66,12 @@ nav li a:hover{
     opacity: 1;
 }
 /* TREŚĆ */
+i{
+    color: #018786;
+}
 main{
     width: 100%;
     height: 100vh;
-    overflow: scroll;
 }
 
 main .contact{
@@ -169,7 +171,8 @@ footer ul{
     transition: 1s;
     transition-timing-function: ease-in-out;
 }
-footer ul i:hover{
+
+footer ul p:hover{
     text-decoration: none;
     font-weight: 700;
     color: #4A148C;
@@ -212,11 +215,10 @@ footer h4 {
     footer ul{
         max-width: auto;
         margin: 0 auto;
-        padding: 0.2em 0;
     }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 650px){
 
     nav ul {
         margin: 0;
