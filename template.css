@@ -1,6 +1,7 @@
 :root {
     --main-bg1-color: #018786;
     --main-bg2-color: #4A148C;
+    --main-bg3-color: #F5F5F5;
     --main-text1-color: #fff;
     --main-text2-color: #8B8B8B;
     --main-dark-color: #000;
@@ -8,7 +9,7 @@
 
 body{
     font-family: 'Nunito', sans-serif;
-    background: var(--main-text1-color);
+    background: var(--main-bg3-color);
     margin: 0;
     padding: 0;
 }

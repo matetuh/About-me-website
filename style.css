@@ -10,6 +10,8 @@ main{
 }
 
 main h1 {
+    border-bottom: 1px solid #018786;
+    padding-bottom: 8px;
     font-size: 2em;
     font-weight: 300;
     color: #1C1717;
